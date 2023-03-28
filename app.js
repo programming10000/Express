@@ -10,7 +10,7 @@ const path=require('path'); // use to access the project outside of the
 
 // install pug or ejs to view the routed file of users in html page on the express server
 
-// app.use(express.static(path.join(__dirname + '/public')))
+app.use(express.static(path.join(__dirname + '/public')))
 
   /* node Express/app on terminal to run
 the file found in this directory is served if the folder is found inside
