@@ -1,6 +1,4 @@
-const { response } = require('express');
 const express=require('express');
-const { request } = require('https');
 const app=express();
 const path=require('path'); // use to access the project outside of the
                                 // the project directory 
