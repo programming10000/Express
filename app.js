@@ -2,7 +2,7 @@ const express=require('express');
 const app=express();
 const port=6969;
 
-
+//for feching data dynamically using express server
 const userRoute=require("./routes/User");
 app.use("/User",userRoute );
 const commentsRoute=require("./routes/comments");
