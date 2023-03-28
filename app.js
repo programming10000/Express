@@ -36,6 +36,6 @@ app.use(express.static('public'));
 
 
 
-app.listen(3000,() =>{
+app.listen(3000,() =>{                       // it is used to run the application on port 300 it is visible on the terminal
     console.log('app listen on port 3000')
 })
