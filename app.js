@@ -1,12 +1,32 @@
 const express=require('express');
 const app=express();
-
-const router=require('./routes/index');
-app.use('/',router)
-const routera=require('./routes/a');
-app.use('/a',routera)
-const routerb=require('./routes/b');
-app.use('/b',routerb)
+const port=6969;
 
 
-app.listen(3000,() => console.log('app listen on port 3000'));
+const userRoute=require("./routes/User");
+app.use("/User",userRoute );
+const commentsRoute=require("./routes/comments");
+app.use("/Comments",commentsRoute );
+
+
+// app.get("/users",(req,res)=>{
+//     res.send({data:"Here Is yor data"});
+// });
+
+// app.post("/users",(req,res)=>{
+//     res.send({data:"User created"});
+// });
+
+// app.put("/users",(req,res)=>{
+//     res.send({data:"User Updated"});
+// });
+
+// app.delete("/users",(req,res)=>{
+//     res.send({data:"user deleted"});
+// });
+
+app.listen(port,()=>{
+    console.log("server running");
+});
+
+
